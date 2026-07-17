@@ -61,6 +61,27 @@ Voir `examples/etude-de-cas-mvp.md` : récit de livraison d’un MVP produit (in
 **Paul EL Khoury** — ingénieur logiciel avec expérience delivery client (simulation, Unreal, produit startup).  
 Objectif : postes junior en **coordination de projet**, **chef de projet IT** ou **Scrum Master** en Île-de-France.
 
+## Interface web (vitrine)
+
+Une UI légère lit les Markdown du repo (source de vérité) et permet de :
+
+- parcourir templates / guides / exemples
+- remplir kickoff + rapport de statut
+- télécharger le `.md` généré
+
+### Pour non-techniques (1 clic)
+
+- **Lien public :** [Ouvrir le kit en ligne](https://popo1-9.github.io/agile-delivery-toolkit/)
+- **Sur ce PC :** double-cliquer `Ouvrir-le-kit.bat` (nécessite Node.js installé une fois)
+
+### En local (dev)
+
+```bash
+cd web
+npm install
+npm run dev
+```
+
 ## Licence
 
 MIT — libre de réutiliser et d’adapter.
