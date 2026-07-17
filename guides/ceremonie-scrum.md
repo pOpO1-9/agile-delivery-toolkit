@@ -1,39 +1,37 @@
-# Cérémonies Scrum (format junior / delivery)
+# Cérémonies Scrum
 
-Guide pratique — utile même hors cadre Scrum “pur”.
+Formats courts. Utiles même si l’équipe n’est pas “Scrum pur”.
 
 ## Daily sync (10–15 min)
 
 - Qu’est-ce qui a avancé ?
 - Qu’est-ce qui bloque ?
-- Quel est le focus du jour ?
+- Focus du jour ?
 
-Astuce : si ça devient un reporting long, sortir le sujet en “parking lot”.
+Si ça dérape en reporting long : noter le sujet et le traiter après.
 
 ## Affinage backlog (30–60 min)
 
-- Clarifier user stories
+- Clarifier les items
 - Découper ce qui est trop gros
-- Ajouter critères d’acceptation
-- Estimer (T-shirt ou story points) seulement si utile à l’équipe
+- Ajouter les critères d’acceptation
+- Estimer seulement si ça aide vraiment l’équipe
 
 ## Planification de sprint (45–90 min)
 
-- Objectif de sprint en une phrase
-- Capacité réelle de l’équipe
+- Objectif en une phrase
+- Capacité réelle
 - Sélection du backlog
-- Identification des dépendances
+- Dépendances
 
 ## Revue de sprint (30–45 min)
 
-- Démo aux parties prenantes
-- Feedback capturé → backlog
-- Validation / non-validation explicite
+- Démo
+- Feedback → backlog
+- Validation claire (oui / non / partiel)
 
 ## Rétrospective (30–45 min)
 
-Formats simples :
-- Start / Stop / Continue
-- Liked / Learned / Lacked / Longed for
+Start / Stop / Continue.
 
-Règle : **max 3 actions**, chacune avec un owner et une date.
+Max 3 actions, chacune avec un owner et une date.

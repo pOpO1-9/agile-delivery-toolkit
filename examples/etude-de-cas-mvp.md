@@ -1,32 +1,25 @@
-# Étude de cas — livraison d’un MVP produit
-
-Exemple portfolio (anonymisé) inspiré d’une plateforme de clipping multi-rôles.
+# Étude de cas — MVP plateforme de clipping
 
 ## Contexte
 
-Startup produit. Besoin : MVP privé pour labels (upload, challenges, validation) et clippeurs invités (soumission, récompenses), avec admin (invitations, import stats).
+Startup. Il fallait un MVP privé pour un label (upload, challenges, validation) et des clippeurs invités (soumission, récompenses), plus un admin pour les invitations et l’import des stats.
 
 ## Mon rôle
 
-Coordination technique + delivery : priorisation, syncs, critères d’acceptation, dossier client (captures, PDF aperçu, roadmap Phase 2, modèle de facture).
+J’ai géré la delivery côté produit : priorités, syncs, critères d’acceptation, et le dossier client (captures, PDF, roadmap Phase 2, modèle de facture).
 
-## Approche
+## Ce qu’on a cadré tôt
 
-1. Kickoff : rôles (admin / label / clippeur), hors scope (paiements réels, APIs TikTok/YouTube).
-2. Backlog découpé en parcours démo testables.
-3. Sprints courts avec démo interne fréquente.
-4. Livrable client structuré pour validation et suite commerciale.
+- 3 rôles : admin, label, clippeur
+- Hors scope MVP : paiements réels, APIs TikTok / YouTube
+- Parcours démo testables plutôt qu’une grosse liste de tickets
 
-## Résultats
+## Résultat
 
-- MVP utilisable de bout en bout (auth, assets, challenges, créations, rewards, CSV)
-- Dossier de présentation client prêt
-- Feuille de route Phase 2 proposée après validation du MVP
+- Parcours bout en bout utilisable
+- Dossier client prêt pour validation
+- Phase 2 proposée seulement après le MVP
 
-## Compétences illustrées
+## Lien
 
-Agile / Scrum · relation client · coordination · architecture logicielle · documentation de livraison
-
-## Preuve
-
-Repo public associé : [clipping-platform-mvp](https://github.com/pOpO1-9/clipping-platform-mvp) (code + `docs/livrable-client/`).
+[clipping-platform-mvp](https://github.com/pOpO1-9/clipping-platform-mvp)

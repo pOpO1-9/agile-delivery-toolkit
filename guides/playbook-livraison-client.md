@@ -1,40 +1,40 @@
 # Playbook livraison client
 
-Process court pour livrer un produit IT avec un client (startup, éditeur, mission conseil).
+Méthode courte pour livrer un produit IT avec un client.
 
-## 1. Avant de coder
+## Avant de coder
 
-- Clarifier le **problème**, le **succès**, et ce qui est **hors scope**
-- Identifier sponsor, utilisateurs, décideurs techniques
-- Choisir rythme (sprint 1–2 semaines) et outil de suivi (Jira, Linear, GitHub Projects…)
-- Remplir : kickoff, RACI, backlog initial, risques
+- Écrire le problème, le succès, et le hors scope
+- Nommer sponsor, utilisateurs, contact technique
+- Choisir le rythme (1–2 semaines) et l’outil de suivi
+- Remplir kickoff, RACI, backlog initial, risques
 
-## 2. Pendant la delivery
+## Pendant
 
-- Prioriser par valeur métier, pas par confort technique
-- Une seule source de vérité pour le backlog
-- Sync courte quotidienne + point statut hebdo
-- Capturer les décisions (qui / quoi / pourquoi)
-- Démo fréquente plutôt qu’un big bang
+- Prioriser par valeur métier
+- Une seule source pour le backlog
+- Sync courte + point statut régulier
+- Noter les décisions (qui / quoi / pourquoi)
+- Démo souvent, pas un big bang
 
-## 3. Avec le client
+## Avec le client
 
-- Parler outcomes (ce qui change pour l’utilisateur), pas seulement tickets
-- Confirmer les critères d’acceptation avant de “terminer”
-- Surprendre positivement avec un livrable lisible (captures, PDF, roadmap)
-- Escalader tôt les risques (délai, dépendances, accès, scope creep)
+- Parler de ce qui change pour l’utilisateur, pas seulement des tickets
+- Valider les critères d’acceptation avant de “terminer”
+- Envoyer un livrable lisible (captures, PDF, roadmap)
+- Remonter tôt les risques (délai, accès, scope)
 
-## 4. Clôture de phase
+## Fin de phase
 
-- Revue : démo + validation explicite
-- Rétro : 1–3 actions max, assignées
-- Facturation / handover / doc d’exploitation si besoin
-- Proposition Phase N+1 seulement après validation MVP
+- Revue avec validation claire
+- Rétro : 1 à 3 actions, chacune avec un owner
+- Handover / facture si besoin
+- Phase suivante seulement après validation du MVP
 
-## Anti-patterns
+## À éviter
 
-- Backlog flou (“améliorer l’UX”)
-- Standup de 40 minutes
-- Aucun critère d’acceptation
-- Décisions orales non écrites
-- Promettre sans buffer sur les risques connus
+- Backlog flou
+- Standup trop long
+- Pas de critères d’acceptation
+- Décisions seulement orales
+- Promettre sans marge sur les risques connus

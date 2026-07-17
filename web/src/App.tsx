@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { marked } from 'marked'
 import { docs, kindLabel, type DocKind, type KitDoc } from './content/catalog'
 import {
@@ -21,7 +21,7 @@ function KickoffForm({ onExport }: { onExport: (md: string) => void }) {
   const [form, setForm] = useState({
     projet: '',
     date: new Date().toISOString().slice(0, 10),
-    facilitateur: 'Paul EL Khoury',
+    facilitateur: '',
     probleme: '',
     succes: '',
     horsScope: '',
@@ -41,7 +41,7 @@ function KickoffForm({ onExport }: { onExport: (md: string) => void }) {
         <input
           value={form.projet}
           onChange={(e) => setForm({ ...form, projet: e.target.value })}
-          placeholder="Ex. Clipping Platform MVP"
+          placeholder="Nom du projet"
           required
         />
       </label>
@@ -58,6 +58,7 @@ function KickoffForm({ onExport }: { onExport: (md: string) => void }) {
         <input
           value={form.facilitateur}
           onChange={(e) => setForm({ ...form, facilitateur: e.target.value })}
+          placeholder="Votre nom"
         />
       </label>
       <label>
@@ -65,14 +66,15 @@ function KickoffForm({ onExport }: { onExport: (md: string) => void }) {
         <textarea
           value={form.probleme}
           onChange={(e) => setForm({ ...form, probleme: e.target.value })}
-          placeholder="En 1–2 phrases"
+          placeholder="En une ou deux phrases"
         />
       </label>
       <label>
-        Définition de succès
+        Critère de succès
         <textarea
           value={form.succes}
           onChange={(e) => setForm({ ...form, succes: e.target.value })}
+          placeholder="Quand est-ce qu’on considère que c’est bon ?"
         />
       </label>
       <label>
@@ -80,6 +82,7 @@ function KickoffForm({ onExport }: { onExport: (md: string) => void }) {
         <textarea
           value={form.horsScope}
           onChange={(e) => setForm({ ...form, horsScope: e.target.value })}
+          placeholder="Ce qu’on ne fait pas maintenant"
         />
       </label>
       <label>
@@ -90,8 +93,8 @@ function KickoffForm({ onExport }: { onExport: (md: string) => void }) {
         />
       </label>
       <div className="form-actions">
-        <button className="btn btn-lime" type="submit">
-          Télécharger le markdown
+        <button className="btn btn-accent" type="submit">
+          Télécharger (.md)
         </button>
       </div>
     </form>
@@ -102,7 +105,7 @@ function StatusForm({ onExport }: { onExport: (md: string) => void }) {
   const [form, setForm] = useState({
     projet: '',
     periode: '',
-    auteur: 'Paul EL Khoury',
+    auteur: '',
     destinataires: '',
     resume: '',
     fait: '',
@@ -131,7 +134,7 @@ function StatusForm({ onExport }: { onExport: (md: string) => void }) {
         <input
           value={form.periode}
           onChange={(e) => setForm({ ...form, periode: e.target.value })}
-          placeholder="Ex. 07–11 juil. 2026"
+          placeholder="Semaine du …"
         />
       </label>
       <label>
@@ -139,6 +142,7 @@ function StatusForm({ onExport }: { onExport: (md: string) => void }) {
         <input
           value={form.auteur}
           onChange={(e) => setForm({ ...form, auteur: e.target.value })}
+          placeholder="Votre nom"
         />
       </label>
       <label>
@@ -146,6 +150,7 @@ function StatusForm({ onExport }: { onExport: (md: string) => void }) {
         <input
           value={form.destinataires}
           onChange={(e) => setForm({ ...form, destinataires: e.target.value })}
+          placeholder="Sponsor, client, équipe…"
         />
       </label>
       <label>
@@ -153,6 +158,7 @@ function StatusForm({ onExport }: { onExport: (md: string) => void }) {
         <textarea
           value={form.resume}
           onChange={(e) => setForm({ ...form, resume: e.target.value })}
+          placeholder="Où on en est"
         />
       </label>
       <label>
@@ -160,7 +166,6 @@ function StatusForm({ onExport }: { onExport: (md: string) => void }) {
         <textarea
           value={form.fait}
           onChange={(e) => setForm({ ...form, fait: e.target.value })}
-          placeholder={'- Item 1\n- Item 2'}
         />
       </label>
       <label>
@@ -175,12 +180,11 @@ function StatusForm({ onExport }: { onExport: (md: string) => void }) {
         <textarea
           value={form.decisions}
           onChange={(e) => setForm({ ...form, decisions: e.target.value })}
-          placeholder={'1. …\n2. …'}
         />
       </label>
       <div className="form-actions">
-        <button className="btn btn-lime" type="submit">
-          Télécharger le markdown
+        <button className="btn btn-accent" type="submit">
+          Télécharger (.md)
         </button>
       </div>
     </form>
@@ -190,10 +194,15 @@ function StatusForm({ onExport }: { onExport: (md: string) => void }) {
 function DocPanel({ doc }: { doc: KitDoc }) {
   const [mode, setMode] = useState<'lire' | 'remplir'>('lire')
 
+  useEffect(() => {
+    setMode('lire')
+  }, [doc.id])
+
   return (
     <section>
       <div className="doc-header">
         <div>
+          <p className="eyebrow">{kindLabel[doc.kind]}</p>
           <h1>{doc.title}</h1>
           <p>{doc.blurb}</p>
         </div>
@@ -202,7 +211,7 @@ function DocPanel({ doc }: { doc: KitDoc }) {
           type="button"
           onClick={() => downloadMarkdown(doc.fileName, doc.content)}
         >
-          Télécharger le template
+          Télécharger
         </button>
       </div>
 
@@ -220,7 +229,7 @@ function DocPanel({ doc }: { doc: KitDoc }) {
             className={`tab ${mode === 'remplir' ? 'active' : ''}`}
             onClick={() => setMode('remplir')}
           >
-            Remplir & exporter
+            Remplir
           </button>
         </div>
       ) : null}
@@ -230,26 +239,34 @@ function DocPanel({ doc }: { doc: KitDoc }) {
           <MarkdownView content={doc.content} />
         ) : doc.fillable === 'kickoff' ? (
           <KickoffForm
-            onExport={(md) => downloadMarkdown(`kickoff-${Date.now()}.md`, md)}
+            onExport={(md) => downloadMarkdown(doc.fileName, md)}
           />
         ) : (
           <StatusForm
-            onExport={(md) => downloadMarkdown(`statut-${Date.now()}.md`, md)}
+            onExport={(md) => downloadMarkdown(doc.fileName, md)}
           />
         )}
       </div>
-      <p className="footer-note">
-        Les fichiers Markdown du repo restent la source de vérité. Cette UI est une vitrine
-        interactive pour démontrer le kit.
-      </p>
     </section>
   )
 }
 
 export default function App() {
-  const [view, setView] = useState<View>('home')
-  const [activeId, setActiveId] = useState('kickoff')
+  const [view, setView] = useState<View>(() => {
+    return localStorage.getItem('adt-view') === 'kit' ? 'kit' : 'home'
+  })
+  const [activeId, setActiveId] = useState(() => {
+    return localStorage.getItem('adt-doc') || 'kickoff'
+  })
   const active = docs.find((d) => d.id === activeId) ?? docs[0]
+
+  useEffect(() => {
+    localStorage.setItem('adt-view', view)
+  }, [view])
+
+  useEffect(() => {
+    localStorage.setItem('adt-doc', activeId)
+  }, [activeId])
 
   return (
     <div className="app-shell">
@@ -259,10 +276,10 @@ export default function App() {
           className="brand-mark"
           onClick={() => setView('home')}
         >
-          <span className="logo-dot">A</span>
+          <span className="logo-dot">PK</span>
           <span>
-            <strong>Agile Delivery Toolkit</strong>
-            <span>Coordination · Scrum · Livraison client</span>
+            <strong>Kit de livraison Agile</strong>
+            <span>Paul EL Khoury</span>
           </span>
         </button>
         <div className="topbar-actions">
@@ -272,7 +289,7 @@ export default function App() {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub
+            Code source
           </a>
           <a
             className="btn btn-ghost"
@@ -280,41 +297,53 @@ export default function App() {
             target="_blank"
             rel="noreferrer"
           >
-            Clipping MVP
+            Projet associé
           </a>
           <button
             type="button"
             className="btn btn-primary"
             onClick={() => setView('kit')}
           >
-            Ouvrir le kit
+            Ouvrir
           </button>
         </div>
       </header>
 
       {view === 'home' ? (
         <section className="hero">
-          <div className="hero-orb" aria-hidden />
           <div className="hero-copy">
-            <h1>Agile Delivery Toolkit</h1>
+            <p className="eyebrow">Île-de-France · coordination de projet</p>
+            <h1>Kit de livraison Agile</h1>
             <p>
-              Un kit FR pour chef de projet IT junior et Scrum Master : templates,
-              guides et exemples pour structurer kickoff, sprints et livraison client.
+              Templates et guides que j’utilise pour cadrer un projet : kickoff,
+              backlog, sprints, syncs client, risques. En français, prêts à copier
+              dans Notion, Confluence ou Jira.
             </p>
             <div className="hero-cta">
-              <button type="button" className="btn btn-lime" onClick={() => setView('kit')}>
-                Explorer les templates
+              <button type="button" className="btn btn-accent" onClick={() => setView('kit')}>
+                Voir les documents
               </button>
               <a
                 className="btn btn-ghost"
-                href="https://github.com/pOpO1-9/agile-delivery-toolkit"
+                href="https://www.linkedin.com/in/paul-el-khoury-8b78081a9"
                 target="_blank"
                 rel="noreferrer"
               >
-                Voir le repo
+                LinkedIn
               </a>
             </div>
           </div>
+          <aside className="hero-aside" aria-label="Contenu du kit">
+            <p className="aside-label">Dans le kit</p>
+            <ul>
+              <li>9 templates projet</li>
+              <li>2 guides pratiques</li>
+              <li>2 exemples remplis</li>
+            </ul>
+            <p className="aside-note">
+              Pas un outil SaaS. Des documents à réutiliser.
+            </p>
+          </aside>
         </section>
       ) : (
         <div className="workspace">
