@@ -29,4 +29,4 @@ Agile / Scrum · relation client · coordination · architecture logicielle · d
 
 ## Preuve
 
-Repo public associé : plateforme clipping + `docs/livrable-client/`.
+Repo public associé : [rdlc-clipping-mvp](https://github.com/pOpO1-9/rdlc-clipping-mvp) (code + `docs/livrable-client/`).
