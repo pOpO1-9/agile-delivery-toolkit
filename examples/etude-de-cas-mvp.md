@@ -1,4 +1,4 @@
-# Étude de cas — MVP plateforme de clipping
+# Étude de cas : MVP plateforme de clipping
 
 ## Contexte
 

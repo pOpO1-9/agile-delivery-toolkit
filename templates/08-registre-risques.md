@@ -10,7 +10,7 @@
 ## Légende
 
 - Probabilité / Impact : Faible / Moyen / Élevé
-- Score indicatif : F=1, M=2, É=3 → Score = P × I
+- Score indicatif : F=1, M=2, É=3. Score = P x I
 - Escalader si score ≥ 6 ou impact élevé sur la date de livraison
 
 ## Risques clos

@@ -26,7 +26,7 @@
 | | | | To do |
 | | | | To do |
 
-## Moral d’équipe (1–5)
+## Moral d’équipe (1-5)
 
 Score : _/_  
 Commentaire libre :  

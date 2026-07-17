@@ -4,7 +4,7 @@
 **Date :**  
 **Participants :**  
 
-## Objectif du sprint — atteint ?
+## Objectif du sprint : atteint ?
 
 - [ ] Oui
 - [ ] Partiellement

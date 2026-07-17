@@ -6,7 +6,7 @@
 
 ## Objectif
 
-- [ ] Problème métier formulé en 1–2 phrases
+- [ ] Problème métier formulé en 1-2 phrases
 - [ ] Résultat attendu (definition of success)
 - [ ] Hors scope explicite
 
@@ -33,7 +33,7 @@
 
 ## Livrables kickoff
 
-- [ ] Backlog initial (10–20 items max)
+- [ ] Backlog initial (10-20 items max)
 - [ ] Risques initiaux
 - [ ] Prochain rendez-vous planifié
 

@@ -312,7 +312,7 @@ export default function App() {
       {view === 'home' ? (
         <section className="hero">
           <div className="hero-copy">
-            <p className="eyebrow">Île-de-France · coordination de projet</p>
+            <p className="eyebrow">Île-de-France, coordination de projet</p>
             <h1>Kit de livraison Agile</h1>
             <p>
               Templates et guides que j’utilise pour cadrer un projet : kickoff,

@@ -19,21 +19,21 @@ export function buildKickoffMarkdown(data: {
 }) {
   return `# Checklist kickoff
 
-**Projet :** ${data.projet || '—'}  
-**Date :** ${data.date || '—'}  
-**Facilitateur :** ${data.facilitateur || '—'}  
+**Projet :** ${data.projet || ''}  
+**Date :** ${data.date || ''}  
+**Facilitateur :** ${data.facilitateur || ''}  
 
 ## Objectif
 
-- [x] Problème métier formulé en 1–2 phrases
+- [x] Problème métier formulé en 1-2 phrases
 - [x] Résultat attendu (definition of success)
 - [x] Hors scope explicite
 
-**Problème :** ${data.probleme || '—'}
+**Problème :** ${data.probleme || ''}
 
-**Succès :** ${data.succes || '—'}
+**Succès :** ${data.succes || ''}
 
-**Hors scope :** ${data.horsScope || '—'}
+**Hors scope :** ${data.horsScope || ''}
 
 ## Parties prenantes
 
@@ -58,7 +58,7 @@ export function buildKickoffMarkdown(data: {
 
 ## Livrables kickoff
 
-- [ ] Backlog initial (10–20 items max)
+- [ ] Backlog initial (10-20 items max)
 - [ ] Risques initiaux
 - [ ] Prochain rendez-vous planifié
 
@@ -80,10 +80,10 @@ export function buildStatusMarkdown(data: {
 }) {
   return `# Rapport de statut (hebdo)
 
-**Projet :** ${data.projet || '—'}  
-**Période :** ${data.periode || '—'}  
-**Auteur :** ${data.auteur || '—'}  
-**Destinataires :** ${data.destinataires || '—'}  
+**Projet :** ${data.projet || ''}  
+**Période :** ${data.periode || ''}  
+**Auteur :** ${data.auteur || ''}  
+**Destinataires :** ${data.destinataires || ''}  
 
 ## En une phrase
 

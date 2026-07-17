@@ -6,7 +6,7 @@ Méthode courte pour livrer un produit IT avec un client.
 
 - Écrire le problème, le succès, et le hors scope
 - Nommer sponsor, utilisateurs, contact technique
-- Choisir le rythme (1–2 semaines) et l’outil de suivi
+- Choisir le rythme (1-2 semaines) et l’outil de suivi
 - Remplir kickoff, RACI, backlog initial, risques
 
 ## Pendant

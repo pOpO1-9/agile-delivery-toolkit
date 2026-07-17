@@ -3,7 +3,7 @@
 **Projet :**  
 **Date :**  
 
-R = Responsible (fait) · A = Accountable (décide / valide) · C = Consulted · I = Informed
+R = Responsible (fait), A = Accountable (décide / valide), C = Consulted, I = Informed
 
 | Activité | Sponsor | PM / SM | Tech lead | Dev | Design | Client métier |
 |----------|---------|---------|-----------|-----|--------|---------------|

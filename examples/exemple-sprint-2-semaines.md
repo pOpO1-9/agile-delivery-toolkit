@@ -1,4 +1,4 @@
-# Exemple — sprint de 2 semaines
+# Exemple : sprint de 2 semaines
 
 **Objectif de sprint :** “Un label peut créer un challenge et un clippeur peut y soumettre une vidéo.”
 
@@ -13,7 +13,7 @@
 
 ## Sync types (résumé)
 
-- J3 : blocage storage policies → spike 2h, résolu
+- J3 : blocage storage policies, spike 2h, résolu
 - J6 : critère d’acceptation “invite only” clarifié avec product
 - J9 : démo interne OK, feedback UX sur badges statut
 
@@ -21,7 +21,7 @@
 
 Objectif partiellement atteint (détail challenge clippeur reporté +1 jour). Sponsor valide le parcours principal.
 
-## Rétro — 3 actions
+## Rétro : 3 actions
 
 1. Écrire les critères d’acceptation **avant** le dev (owner: PM)
 2. Spike technique le jour 1 si risque infra (owner: tech)

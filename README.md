@@ -11,10 +11,10 @@ Fait pour des rôles **chef de projet IT junior**, **Scrum Master** ou **coordin
 
 ## Contenu
 
-- `templates/` — 9 documents prêts à remplir
-- `guides/` — playbook client + cérémonies Scrum
-- `examples/` — étude de cas + sprint type
-- `web/` — interface pour lire / remplir / télécharger
+- `templates/` : 9 documents prêts à remplir
+- `guides/` : playbook client + cérémonies Scrum
+- `examples/` : étude de cas + sprint type
+- `web/` : interface pour lire / remplir / télécharger
 
 ## Usage rapide
 
@@ -26,7 +26,7 @@ Fait pour des rôles **chef de projet IT junior**, **Scrum Master** ou **coordin
 
 ## Auteur
 
-Paul EL Khoury — Levallois-Perret / Île-de-France  
+Paul EL Khoury, Levallois-Perret / Île-de-France  
 LinkedIn : https://www.linkedin.com/in/paul-el-khoury-8b78081a9
 
 ## Licence
